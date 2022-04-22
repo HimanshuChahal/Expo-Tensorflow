@@ -1,20 +1,13 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { View, StatusBar } from 'react-native'
+import TensorflowDetection from "./src/TensorflowDetection"
 
-export default function App() {
+const App = () => {
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View style = {{ flex: 1, marginTop: StatusBar.currentHeight, backgroundColor: 'white', borderWidth: 10 }}>
+      <TensorflowDetection/>
     </View>
-  );
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App
