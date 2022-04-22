@@ -92,10 +92,10 @@ class RealtimeDemo extends React.Component {
 
         try
         {
-            // await tf.ready()
-            // await tf.setBackend()
+            await tf.ready()
+            await tf.setBackend()
 
-            // const posenetModel = await this.loadPosenetModel()
+            const posenetModel = await this.loadPosenetModel()
 
             this.setState({
                 hasCameraPermission: status === 'granted',
